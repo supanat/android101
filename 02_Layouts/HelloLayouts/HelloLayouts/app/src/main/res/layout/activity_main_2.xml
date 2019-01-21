@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="th.ac.rsu.hellolayouts.MainActivity">
+
+    <View
+        android:id="@+id/viewRed"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#ff0000" />
+
+    <View
+        android:id="@+id/viewYellow"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_toRightOf="@id/viewRed"
+        android:background="#ffff00" />
+
+    <View
+        android:id="@+id/viewGreen"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/viewYellow"
+        android:layout_alignLeft="@id/viewYellow"
+        android:background="#00ff00" />
+
+
+</RelativeLayout>
