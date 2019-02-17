@@ -66,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v) {
 
             RadioButton radioButton = (RadioButton)v;
-
             Toast.makeText(MainActivity.this,radioButton.getText().toString(),Toast.LENGTH_SHORT).show();
 
         }
