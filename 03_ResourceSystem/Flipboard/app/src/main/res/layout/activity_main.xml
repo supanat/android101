@@ -48,13 +48,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Reimagined,with over \n 300,000 new topics"
+                        android:text="Reimagined,with over\n300,000 new topics"
                         android:textSize="18sp" />
 
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#FFFF"/>
+
 
 
                 </LinearLayout>
@@ -94,7 +91,7 @@
                 android:layout_marginBottom="4dp"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="By Continuing. you accept the Term of Use and Pricacy Policy"
+                android:text="By Supanat Jintawatsakoon ID:XXXXX"
                 style="@style/TextViewStyle"/>
 
 

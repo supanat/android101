@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#FFFF00"
+        android:src="@drawable/bg"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_below="@+id/bg"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-64dp"/>
+
+    <TextView
+        android:id="@+id/select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:text="Select From"
+        android:layout_marginTop="32dp"
+        android:layout_centerHorizontal="true"/>
+    
+    <Button
+        android:id="@+id/btnGallery"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Gallery"
+        android:layout_below="@+id/select"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:background="#D81E28"
+        android:textColor="#FFFF"/>
+
+<Button
+        android:id="@+id/Camera"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Camera"
+        android:layout_below="@+id/btnGallery"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:background="#D81E28"
+        android:textColor="#FFFF"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Copyright 2019 Flipboard"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"/>
+
+</RelativeLayout>

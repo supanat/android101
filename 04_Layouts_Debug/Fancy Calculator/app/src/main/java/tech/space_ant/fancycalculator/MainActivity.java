@@ -16,6 +16,10 @@ public class MainActivity extends AppCompatActivity {
 
      Button btnOK;
      RoundedButton btnAccept;
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         btnOK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FancyToast.makeText(MainActivity.this,"Hello", Toast.LENGTH_SHORT,FancyToast.SUCCESS,true).show();
+                FancyToast.makeText(MainActivity.this,"Hello", Toast.LENGTH_SHORT,FancyToast.ERROR,true).show();
 
                 Log.d("debug","fc");
             }
@@ -35,10 +39,12 @@ public class MainActivity extends AppCompatActivity {
         btnAccept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FancyToast.makeText(MainActivity.this,"Hello", Toast.LENGTH_SHORT,FancyToast.ERROR,true).show();
 
-                Log.d("debug","fc");
+                FancyToast.makeText(MainActivity.this,"Hello", Toast.LENGTH_SHORT,FancyToast.INFO,true).show();
+
             }
         });
+
+
     }
 }
