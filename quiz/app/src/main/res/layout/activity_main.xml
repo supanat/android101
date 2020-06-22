@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <ImageView
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/frame8"/>
+
+
+
+
+
+
+
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="64dp"
+        android:layout_marginBottom="32dp"
+        android:hint="your name"
+
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/frame"
+        android:maxLines="1"
+        android:singleLine="true"/>
+
+
+    <EditText
+        android:id="@+id/edtMail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="64dp"
+        android:layout_marginBottom="32dp"
+        android:hint="email address"
+        android:inputType="textEmailAddress"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/edtName"
+        android:maxLines="1"
+        android:singleLine="true"/>
+
+    <EditText
+        android:id="@+id/edtPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="64dp"
+        android:layout_marginBottom="32dp"
+        android:hint="phone number"
+        android:inputType="phone"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/edtMail"
+        android:maxLines="1"
+
+        android:singleLine="true"/>
+
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="64dp"
+        android:layout_marginBottom="64dp"
+        android:text="next"
+        android:textColor="#FFFF"
+        android:background="#4B4A4A"/>
+
+
+
+</RelativeLayout>

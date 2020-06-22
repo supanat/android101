@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThirdActivity"
+    >
+
+    <ImageView
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/frame8"/>
+
+
+    <LinearLayout
+        android:layout_below="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please Verify Your Information"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/imgTeam"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:layout_weight="1"
+            android:src="@drawable/blue"
+            android:scaleType="fitCenter"
+            android:background="#00FFFFFF"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone"
+            android:gravity="center"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="64dp"
+        android:layout_marginBottom="64dp"
+        android:text="submit"
+        android:textColor="#FFFF"
+        android:background="#4B4A4A"/>
+
+
+
+</RelativeLayout>

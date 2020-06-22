@@ -6,12 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
 
     private EditText edtInput1;
-    private EditText getEdtInput2;
+    private EditText edtInput2;
     private Button btnCalculate;
 
     @Override
@@ -19,11 +20,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        edtInput1 = findViewById(R.id.edtInput1);
+        edtInput2 = findViewById(R.id.edtInput2);
+
         btnCalculate = findViewById(R.id.btnCalculate);
 
         btnCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+                Double v1 = Double.parseDouble(edtInput1.getText().toString());
+                Double v2 = Double.parseDouble(edtInput2.getText().toString());
+                Double sum = v1+v2;
+
+                Toast.makeText(MainActivity.this,sum+"",Toast.LENGTH_LONG).show();
                 //Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                 //startActivity(intent);
 
@@ -32,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 //startActivity(intent);
 
 
+                /*
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
 
                 Student student1 = new Student();
@@ -46,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
                 intent.putExtra("student", bundle);
                 startActivity(intent);
-
+                */
 
             }
         });

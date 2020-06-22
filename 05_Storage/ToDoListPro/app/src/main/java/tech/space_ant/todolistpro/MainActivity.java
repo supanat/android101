@@ -13,13 +13,17 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.firebase.ui.database.FirebaseListAdapter;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -47,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
 
     private int currentItem;
 
+    Query query;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,23 +63,41 @@ public class MainActivity extends AppCompatActivity {
         buttonAdd = (Button) findViewById(R.id.button);
 
 
+        database = FirebaseDatabase.getInstance();
+        myRef = database.getReference("message");
+
+
+
+
+
         toDoItems = new ArrayList<>();
 
-        /*
+
         for (int i=0;i<5;i++){
             ToDoItem item = new ToDoItem();
-            item.setId(i);
             item.setTask(i+"");
             toDoItems.add(item);
         }
-        */
+
 
         Map<String, String> map = new HashMap<String, String>();
         map.put("task", "watch tv");
 
 
-        arrayAdapter = new ArrayAdapter<>(this,android.R.layout.simple_expandable_list_item_1,toDoItems);
-        listView.setAdapter(arrayAdapter);
+        //arrayAdapter = new ArrayAdapter<>(this,android.R.layout.simple_expandable_list_item_1,toDoItems);
+        //listView.setAdapter(arrayAdapter);
+
+        /*
+        listView.setAdapter(new FirebaseListAdapter<ToDoItem>(this,
+                ToDoItem.class,
+                android.R.layout.two_line_list_item,
+                myRef) {
+            @Override
+            protected void populateView(@NonNull View v, @NonNull ToDoItem model, int position) {
+
+            }
+        });
+        */
 
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -93,25 +117,9 @@ public class MainActivity extends AppCompatActivity {
         registerForContextMenu(listView);
 
 
-        database = FirebaseDatabase.getInstance();
-        myRef = database.getReference("message");
-
-        myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-                ToDoItem item =  dataSnapshot.getValue(ToDoItem.class);
-
-                Toast.makeText(MainActivity.this,item.getTask(),Toast.LENGTH_LONG).show();
 
 
-            }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
 
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -204,6 +212,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
